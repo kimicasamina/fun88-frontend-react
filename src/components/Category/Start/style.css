@@ -6,14 +6,14 @@
   height: 100%;
 
   flex: 1;
-  /* background-color: aqua; */
 }
 
-.list {
-  height: 410px;
+/* .list {
+  scrollbar-width: none;
+  height: 100%;
   overflow-y: scroll;
-  background-color: #ffffff;
+  background-color: #770d0d;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
-}
+} */

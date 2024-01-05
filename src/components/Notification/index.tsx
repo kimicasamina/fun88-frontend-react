@@ -1,5 +1,5 @@
 import React from 'react'
-import { bell } from '../../../assets'
+import { bell } from '../../assets'
 import './style.css'
 
 export default function Notification() {

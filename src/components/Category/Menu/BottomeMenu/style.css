@@ -2,10 +2,34 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  padding: 8px 0;
   background-color: #ffffff;
+  padding: 8px 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.bottom-menu .link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.bottom-menu .link:hover {
+  color: red;
+}
+
+.bottom-menu .link-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.bottom-menu .link-name {
+  color: #888888;
+  font-size: 14px;
+  text-align: center;
+}
+.bottom-menu .link-name:hover {
+  color: #00a6ff;
 }

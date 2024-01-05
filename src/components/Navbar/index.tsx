@@ -1,5 +1,5 @@
 import React from 'react'
-import { menu, wallet, logo, user } from '../assets'
+import { menu, wallet, logo, user } from '../../assets'
 import './style.css'
 
 export default function Navbar() {
@@ -13,7 +13,7 @@ export default function Navbar() {
         <div className="account">
           <div className="wallet">
             <img src={wallet} alt="" className="" />
-            <p className="">${moneyAmount}</p>
+            <p className="amount">${moneyAmount}</p>
           </div>
           <img src={user} alt="" className="avatar" />
         </div>

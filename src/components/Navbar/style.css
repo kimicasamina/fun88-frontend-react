@@ -3,7 +3,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+
+  padding: 0 8px;
 }
 
 .navbar .branding {
@@ -16,6 +23,11 @@
   justify-content: space-between;
   align-items: center;
   gap: 16px;
+}
+
+.navbar .amount {
+  color: #00a6ff;
+  font-weight: 600;
 }
 
 .navbar .account .wallet {

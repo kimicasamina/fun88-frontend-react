@@ -1,10 +1,12 @@
 .root-layout {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  padding: 0 8px;
 }
 
 .root-main {

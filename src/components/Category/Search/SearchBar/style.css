@@ -1,0 +1,33 @@
+.searchBar {
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  position: relative;
+}
+
+.search-input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  box-shadow: none;
+  outline: none;
+  padding-left: 32px;
+  border: solid 1px #888888;
+  color: #888888;
+  cursor: pointer;
+}
+
+.search-input:focus {
+  border: solid 1px #00a6ff;
+}
+
+.search-icon {
+  position: absolute;
+  left: 5px;
+  top: 7px;
+  bottom: 0;
+  width: 24px;
+  height: 24px;
+  z-index: 1;
+}

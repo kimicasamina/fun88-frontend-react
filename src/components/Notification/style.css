@@ -1,0 +1,14 @@
+.notification {
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background-color: #ffffff;
+}
+
+.notification-msg {
+  font-size: 12px;
+  color: #00a6ff;
+}
+
+.notification-icon {
+}

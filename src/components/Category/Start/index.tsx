@@ -10,6 +10,10 @@ export default function Start() {
         <p className="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate doloribus cumque ea dicta voluptatem earum minima, quo molestias nesciunt doloremque.</p>
         <p className="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate doloribus cumque ea dicta voluptatem earum minima, quo molestias nesciunt doloremque.</p>
         <p className="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate doloribus cumque ea dicta voluptatem earum minima, quo molestias nesciunt doloremque.</p>
+        <p className="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate doloribus cumque ea dicta voluptatem earum minima, quo molestias nesciunt doloremque.</p>
+        <p className="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate doloribus cumque ea dicta voluptatem earum minima, quo molestias nesciunt doloremque.</p>
+        <p className="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate doloribus cumque ea dicta voluptatem earum minima, quo molestias nesciunt doloremque.</p>
+        <p className="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate doloribus cumque ea dicta voluptatem earum minima, quo molestias nesciunt doloremque.</p>
       </div>
     </div>
   )
