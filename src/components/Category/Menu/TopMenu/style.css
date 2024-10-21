@@ -1,0 +1,7 @@
+.top-menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 8px 0;
+}

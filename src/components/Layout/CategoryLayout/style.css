@@ -1,0 +1,11 @@
+.home-layout {
+  width: 100%;
+  display: grid;
+
+  /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+}
+
+.home-main {
+}
