@@ -8,6 +8,11 @@ import Slots from "../components/Category/Slots";
 import Live from "../components/Category/Live";
 import Jackpot from "../components/Jackpot";
 import Home from "../pages/Home";
+import Sports from "../components/Category/Sports";
+import Favorites from "../components/Category/Favorites";
+import Invite from "../components/Category/Invite";
+import CasinoLive from "../components/Category/CasinoLive";
+import Cashier from "../components/Category/Cashier";
 import RootLayout from "../components/Layout/RootLayout/RootLayout";
 import CategoryLayout from "../components/Layout/CategoryLayout";
 
@@ -44,6 +49,27 @@ export const router = createBrowserRouter([
               path: "/jackpot",
               element: <Jackpot />
             },
+            {
+              path: "/sports",
+              element: <Sports />
+            },
+            {
+              path: "/favorites",
+              element: <Favorites />
+            },
+            {
+              path: "/invite",
+              element: <Invite />
+            },
+            {
+              path: "/casinolive",
+              element: <CasinoLive />
+            },
+            {
+              path: "/cashier",
+              element: <Cashier />
+            },
+
           ]
         }
       ],

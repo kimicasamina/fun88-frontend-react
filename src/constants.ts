@@ -209,3 +209,42 @@ export const gameProviders = [
         logo: relaxGaming,
     },
 ]
+
+export const favorites = [
+    {
+        id: 1,
+        name: 'Big Bad Wolf',
+        img: bigBadWolf,
+        link: '/'
+    },
+    {
+        id: 2,
+        name: 'Anaconda Wild 2',
+        img: anacondaWild2,
+        link: '/'
+    },
+    {
+        id: 3,
+        name: 'Azteca',
+        img: azteca,
+        link: '/'
+    },
+    {
+        id: 4,
+        name: 'Beach Live',
+        img: beachLive,
+        link: '/'
+    },
+    {
+        id: 5,
+        name: 'Book of Egypt',
+        img: bookOfEgypt,
+        link: '/'
+    },
+    {
+        id: 6,
+        name: 'Candy',
+        img: candy,
+        link: '/'
+    },
+]
