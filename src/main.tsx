@@ -1,10 +1,13 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { ProvideGlobal } from './context/useGlobalContext.tsx'
 import App from './App.tsx'
 import './index.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <ProvideGlobal >
+      <App />
+    </ProvideGlobal>
   </StrictMode>,
 )

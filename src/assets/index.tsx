@@ -43,8 +43,9 @@ import pragmaticPlay2 from './logo/pragmatic-play-2.svg'
 import pragmaticPlay from './logo/pragmatic-play.svg'
 import redTiger from './logo/red-tiger.svg'
 import relaxGaming from './logo/relax-gaming.svg'
+import startOutline from './star-outline.svg'
 
 
 export {
-    logo, menu, wallet, user, banner, bell, search, fire, slot, woman, jackpot, newIcon, ball, star, invite, dice, cashier, filter, bigBadWolf, anacondaWild2, azteca, beachLive, bookOfEgypt, candy, crocodileBlits, incaJackpot, mayaJackpot, piratesPower, prideOfPersia, everyMatrix, evolution, gameArt, haberno, hacksawGaming, inbetGames, netent, pg, playGo, play, playson, playtech, pragmaticPlay, pragmaticPlay2, redTiger, relaxGaming
+    logo, menu, wallet, user, banner, bell, search, fire, slot, woman, jackpot, newIcon, ball, star, invite, dice, cashier, filter, bigBadWolf, anacondaWild2, azteca, beachLive, bookOfEgypt, candy, crocodileBlits, incaJackpot, mayaJackpot, piratesPower, prideOfPersia, everyMatrix, evolution, gameArt, haberno, hacksawGaming, inbetGames, netent, pg, playGo, play, playson, playtech, pragmaticPlay, pragmaticPlay2, redTiger, relaxGaming, startOutline
 }
