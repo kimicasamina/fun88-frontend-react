@@ -41,23 +41,22 @@ export default function Carousel() {
       setIndex(index + 1)
     }
   }
-
-
+  
+  
   function animateSliderInfinitely() {
-    // nextSlides();
     setInterval(() => {
       nextSlides();
-    }, 2000);
-  }
-
+    }, 5000);
+  } 
 
   useEffect(() => {
-    // animateSliderInfinitely()
-  }, [])
+    setInterval(() => {
+      nextSlides();
+    }, 5000);
+  }, [setIndex])
+
   return (
     <div className='carousel'>
-      <button className="prev-btn" onClick={prevSlides}>Prev</button>
-      <button className="next-btn" onClick={nextSlides}>Next</button>
       <img src={slides[index]} alt="" className="carousel-img" />
     </div>
   )

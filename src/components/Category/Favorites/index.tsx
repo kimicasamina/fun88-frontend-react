@@ -14,7 +14,7 @@ export default function Favorites() {
             {
                 favorites && favorites.length > 0 ? (
                     favorites.map((item) => (
-                        <li className='item'>
+                        <li className='item' key={item.id}>
                             <img src={item.img} alt="" className="item-img" />
                         </li>
                     ))

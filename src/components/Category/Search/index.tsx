@@ -18,6 +18,7 @@ interface Game {
 
 
 export default function Search() {
+  const [gameData, setGameData] = useState<Game[] | null>(null)
   const [searchKeyword, setSearchKeyword] = useState<string>('')
   const [searchGames, setSearchGames] = useState<Game[]>([])
   const [showStar, setShowStar] = useState<boolean>(false)
@@ -25,19 +26,37 @@ export default function Search() {
   const {favorites, addFavorite, updateFavorites, removeFavorite} = React.useContext(GlobalContext) as GlobalContextType;
 
   useEffect(() => {
-    const result = games.filter((item) => {
-      if (item.name.toLowerCase().includes(searchKeyword.toLowerCase())){
-        return item
-      }
-    })
+    if(games){
+      const result = games.filter((item) => {
+        if (item.name.toLowerCase().includes(searchKeyword.toLowerCase())){
+          return item
+        }
+      })
+      setSearchGames(result)
+    }
 
-    setSearchGames(result)
   }, [searchKeyword])
 
-  function handleAddToFavorites(e, game: Game){
+  async function fetchData() {
+    setTimeout(() => {
+      console.log('games', games)
+      setGameData(games)
+    }, 3000)
+  }
+  
+  useEffect(() => {
+    fetchData()
+  }, [])
+
+  function handleAddToFavorites(e: React.MouseEvent<HTMLElement>, game: Game){
     e.preventDefault()
     console.log(game)
-    addFavorite(game)
+    const existingItem = favorites?.findIndex((item) => item.id === game.id)
+    if(existingItem === -1){
+      addFavorite(game)
+    } else {
+      removeFavorite(game.id)
+    }
   }
 
   console.log("FAVORITES", favorites)
