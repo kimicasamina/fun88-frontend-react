@@ -1,4 +1,3 @@
-import React from "react";
 import Carousel from "../../components/Carousel";
 import Notification from "../../components/Notification";
 import TopMenu from "../../components/Category/Menu/TopMenu";

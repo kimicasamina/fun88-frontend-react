@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { filter } from '../../../../assets'
 import './style.css'
-import FilterMenu from './filterMenu'
 import { gameProviders } from '../../../../constants'
 
 export default function Filter() {
@@ -13,13 +12,13 @@ export default function Filter() {
         {
             showFilter ? (
                 <div className="menu">
-                    <img src={filter} alt="" className="filter-icon" onClick={(e) => setShowFilter((prev) => !prev)}/>
+                    <img src={filter} alt="" className="filter-icon" onClick={() => setShowFilter((prev) => !prev)}/>
                     <p className="filter-title">Game Provider</p>
                     <span className="countCrumbs">{gameCounts}</span>
                 </div>
             ):(
                 <div className="menu">
-                    <img src={filter} alt="" className="filter-icon" onClick={(e) => setShowFilter((prev) => !prev)}/>
+                    <img src={filter} alt="" className="filter-icon" onClick={() => setShowFilter((prev) => !prev)}/>
                 </div>
             )
         }

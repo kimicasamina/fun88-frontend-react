@@ -1,13 +1,12 @@
 import React from 'react'
 import { GlobalContext } from '../../../context/useGlobalContext';
-import { useContext } from 'react';
 import { GlobalContextType } from '../../../context/useGlobalContext';
 import './style.css'
 
 export default function Favorites() {
-    const {favorites, addFavorite, updateFavorites, removeFavorite} = React.useContext(GlobalContext) as GlobalContextType;
+    const {favorites} = React.useContext(GlobalContext) as GlobalContextType;
     
-    console.log(favorites)
+    
   return (
     <div className="favorites">
         <ul className="list">

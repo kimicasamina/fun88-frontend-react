@@ -1,4 +1,3 @@
-import React from 'react'
 import './style.css'
 // import TopMenu from '../../Category/Menu/TopMenu'
 // import BottomMenu from '../../Category/Menu/BottomeMenu'

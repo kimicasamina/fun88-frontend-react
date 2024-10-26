@@ -1,4 +1,3 @@
-import React from 'react'
 import { bell } from '../../assets'
 import './style.css'
 

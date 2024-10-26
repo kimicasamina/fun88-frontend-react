@@ -14,7 +14,6 @@ import Invite from "../components/Category/Invite";
 import CasinoLive from "../components/Category/CasinoLive";
 import Cashier from "../components/Category/Cashier";
 import RootLayout from "../components/Layout/RootLayout/RootLayout";
-import CategoryLayout from "../components/Layout/CategoryLayout";
 
 export const router = createBrowserRouter([
     {   

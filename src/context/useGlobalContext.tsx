@@ -41,6 +41,7 @@ export function ProvideGlobal(props: Props) {
         setFavorites([...favorites, game])
     }
     function updateFavorites(id:number) {
+        console.log(id)
         return null
         // setFavorites([...favorites, game])
     }

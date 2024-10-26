@@ -1,8 +1,11 @@
-import React from 'react'
 import { search } from '../../../../assets'
 import './style.css'
 
-export default function SearchBar({setSearchKeyword}) {
+type Props = {
+  setSearchKeyword: React.Dispatch<React.SetStateAction<string>>
+}
+
+export default function SearchBar({setSearchKeyword} : Props) {
   return (
     <div className="searchBar">
         <img src={search} alt="" className="search-icon" />

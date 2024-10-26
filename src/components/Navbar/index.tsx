@@ -1,4 +1,3 @@
-import React from 'react'
 import { menu, wallet, logo, user } from '../../assets'
 import './style.css'
 

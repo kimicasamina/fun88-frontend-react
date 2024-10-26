@@ -1,13 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { games } from '../../../constants'
-import { useContext } from 'react'
 import SearchBar from './SearchBar'
 import Filter from './Filter'
-import { star, startOutline } from '../../../assets'
+import { startOutline } from '../../../assets'
 import './style.css'
 import { GlobalContext } from '../../../context/useGlobalContext'
 import { GlobalContextType } from '../../../context/useGlobalContext'
+
 interface Game {
   id: number,
   name: string,
@@ -16,18 +16,17 @@ interface Game {
 }
 
 
-
 export default function Search() {
   const [gameData, setGameData] = useState<Game[] | null>(null)
   const [searchKeyword, setSearchKeyword] = useState<string>('')
   const [searchGames, setSearchGames] = useState<Game[]>([])
   const [showStar, setShowStar] = useState<boolean>(false)
-  const starRef = useRef(null)
-  const {favorites, addFavorite, updateFavorites, removeFavorite} = React.useContext(GlobalContext) as GlobalContextType;
+  const starRef = useRef<number | null>(null)
+  const {favorites, addFavorite, removeFavorite} = React.useContext(GlobalContext) as GlobalContextType;
 
   useEffect(() => {
-    if(games){
-      const result = games.filter((item) => {
+    if(gameData){
+      const result = gameData.filter((item) => {
         if (item.name.toLowerCase().includes(searchKeyword.toLowerCase())){
           return item
         }
@@ -61,15 +60,15 @@ export default function Search() {
 
   console.log("FAVORITES", favorites)
 
-  function handleMouseEnter(id){
-    console.log("HOVER EFFECT", id)
+  function handleMouseEnter(e: React.MouseEvent<HTMLElement>, id: number){
+    console.log("HOVER EFFECT", e)
     console.log(starRef.current)
-    setShowStar((prev) => prev = true)
+    setShowStar(true)
     starRef.current = id
   }
 
-  function handleMouseLeave(id){
-    setShowStar((prev) => prev = false)
+  function handleMouseLeave(){
+    setShowStar(false)
     starRef.current = null
   }
 
@@ -85,9 +84,9 @@ export default function Search() {
           searchKeyword === '' && games ? (
             games.map((game) => (
               <Link to={game.link} className="item" key={game.id} 
-              onMouseLeave={(e) => handleMouseLeave(game.id)} onMouseEnter={(e) => handleMouseEnter(game.id)} >
+              onMouseLeave={handleMouseLeave} onMouseEnter={(e) => handleMouseEnter(e, game.id)} >
                 <img src={game.img} alt="" className="item-img" />
-                <button className={`star-btn ${showStar && starRef.current == game.id ? "isVisible":""} ${favorites.some(element => element.id === game.id) ? 'isVisible':''}`} ref={starRef} onClick={(e) => handleAddToFavorites(e, game)}>
+                <button className={`star-btn ${showStar && starRef.current == game.id ? "isVisible":""} ${favorites?.some(element => element.id === game.id) ? 'isVisible':''}`} onClick={(e) => handleAddToFavorites(e, game)}>
                   <img src={startOutline} alt="" className="star-icon" />
                 </button>
               </Link>
@@ -98,9 +97,9 @@ export default function Search() {
           searchKeyword !== '' ? (
             searchGames.map((game) => (
               <Link to={game.link} className="item" key={game.id} 
-              onMouseLeave={(e) => handleMouseLeave(game.id)} onMouseEnter={(e) => handleMouseEnter(game.id)} >
+              onMouseLeave={handleMouseLeave} onMouseEnter={(e) => handleMouseEnter(e, game.id)} >
                 <img src={game.img} alt="" className="item-img" />
-                <button className={`star-btn ${showStar && starRef.current == game.id ? "isVisible":""}`} ref={starRef} onClick={(e) => handleAddToFavorites(e, game)}>
+                <button className={`star-btn ${showStar && starRef.current == game.id ? "isVisible":""}`}  onClick={(e) => handleAddToFavorites(e, game)}>
                   <img src={startOutline} alt="" className="star-icon" />
                 </button>
               </Link>
